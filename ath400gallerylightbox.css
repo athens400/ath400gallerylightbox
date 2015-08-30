@@ -1,0 +1,190 @@
+/*****************************************
+ * Style for ath400 Gallery & Lightbox
+ *****************************************/
+
+/*****************************************
+ * Gallery
+ ***/
+
+.ath400gallery {
+    line-height: 0;
+    font-size: 0;
+    margin: 10px -10px;
+}
+
+/* Thumbs & Categories ------------------*/
+
+.ath400gallery .imgFrame {
+    display: inline-block;
+    vertical-align: top;
+    max-height: 100px;                          /* These are resonsible for image height and width as the img itself is set to inherit max-size */
+    max-width: 100px;                           /*----------------------------------------------------------------------------------------------*/
+    height: 100%;                              
+    width: 100%;                               
+    box-shadow: 0 0 1px 1px black, inset 0 0 1px 10px black;
+    white-space: nowrap;
+    text-align: center;
+    margin: 10px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.ath400gallery .imgFrame.circle{
+    border-radius: 50%;
+}
+
+.ath400gallery .imgFrame img {
+    height: inherit;
+}
+
+.ath400gallery .imgFrame:hover img {
+    opacity: 0.7;
+}
+
+.ath400gallery a {
+    max-height: inherit;
+    max-width: inherit;
+}
+
+.ath400gallery .imgFrame .galleryImg {
+    max-height: inherit;
+    max-width: inherit;
+    vertical-align: middle;
+}
+
+/* Categories --------------------*/
+
+.ath400gallery .galleryCategories .openCategory, .ath400gallery .selected {
+    box-shadow: 0 0 1px 3px black, inset 0 0 1px 10px black;
+}
+
+.ath400gallery .galleryCategories .imgFrame {
+    position: relative;
+}
+
+.ath400gallery .galleryCategories .imgFrame figcaption{
+    display: block;
+    font-size: 12px;
+    line-height: 1.2em;
+    position: absolute;
+    padding: 0.2em 1em;
+    bottom: 2em;
+    left: 0;
+    white-space: normal;
+    background-color: rgba(100,100,100,0.8);
+}
+
+.ath400gallery .galleryCategory {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Current image --------------------------*/
+
+.ath400gallery .currentImage {
+    display: inline-block;
+    text-align: center;
+}
+
+.ath400gallery .currentImage figure {
+    margin: 0;
+}
+
+.ath400gallery .currentImage img {
+    box-shadow: 0 0 1px 1px black;
+    height: 300px;
+}
+
+.ath400gallery .currentImage figcaption {
+    font-size: 12pt;
+    line-height: 1.5em;
+    min-height: 1.5em;
+    font-style: italic;
+}
+
+ 
+/*****************************************
+ * Lightbox
+ ***/
+
+.ath400lightboxOverlay {
+    background: rgba(30,30,30,0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+}
+
+.ath400lightbox {
+    display: inline-block;
+    vertical-align: middle;
+    background: #fdfdfd url(img/loading.gif) no-repeat scroll center center;
+    padding: 20px;
+    border-radius: 1px;
+}
+
+.ath400lightbox .ath400lightboxCaption {
+    color: #666;
+    font-style: italic;
+}
+
+.ath400lightbox .imgFrame {
+    margin: 0;
+}
+
+/* Navigation -----------------------*/
+
+.ath400lightboxNext {
+    background: url(img/rarr.png) no-repeat scroll center center;
+}
+
+.ath400lightboxPrev {
+    background: url(img/larr.png) no-repeat scroll center center;
+}
+
+.ath400lightboxNext, .ath400lightboxPrev {
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    width: 60px;
+    background-size: 100% auto;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.ath400lightboxNext:hover, .ath400lightboxPrev:hover {
+    //background-color: rgba(0,0,0,0.5);
+    opacity: 0.6;
+    //transition: all 0.5s;
+}
+
+
+
+
+/*****************************************
+ * Other
+ ***/
+
+.alignmentHelperHeight {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.aligmentHelperWidth {
+    display: inline-block;
+    width: 100%;
+    font-size: 0;       //test if still needed in safari
+    line-height: 0;     //test if still needed in safari
+}
+
+
+/*--------------------------------------------------------*/
+
+
+.absolute {
+    position: absolute;
+}
